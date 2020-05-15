@@ -1,5 +1,3 @@
-# LEAKYDRIPPER
-
 This repository covers various techniques and methods for leaking various Windows kernel addresses on Windows 10 1607, 1703, and 1809. This repository provides the tools and code as proof of concepts for leaking these kernel addresses. Linked below is a blog post that explains every detail and aspect of how this works. Leaking Windows kernel addresses from a unprivileged user mode standpoint can be used to bypass and circumvent the KASLR security mitigation that's in place for Microsoft.
 
 These windows kernel address leaks may also be combined with an arbitrary write or read primitive in order to obtain any exploitation means that an attacker has in mind.
