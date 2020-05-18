@@ -1,6 +1,4 @@
-This repository covers various techniques and methods for leaking various Windows kernel addresses on Windows 10 1607, 1703, and 1809. This repository provides the tools and code as proof of concepts for leaking these kernel addresses. Linked below is a blog post that explains every detail and aspect of how this works. Leaking Windows kernel addresses from a unprivileged user mode standpoint can be used to bypass and circumvent the KASLR security mitigation that's in place for Microsoft.
-
-These windows kernel address leaks may also be combined with an arbitrary write or read primitive in order to obtain any exploitation means that an attacker has in mind.
+This repository covers various techniques and methods for leaking various Windows kernel addresses on Windows 10 1607, 1703, 1809, and 1909. This repository provides the tools and code as proof of concepts for leaking these kernel addresses. Leaking Windows kernel addresses from a unprivileged user mode standpoint can be combined with various offsets and used to bypass the KASLR security mitigation.
 
 Blog post that goes along with this - https://fullpwnops.com/Windows-10-kaslr-infoleak/
 
@@ -18,10 +16,8 @@ This Windows kernel address leakage proof-of-concept demonstrates how the user-m
 
 ### Resources
 
-- [1] [https://www.youtube.com/watch?v=Gu_5kkErQ6Y](https://www.youtube.com/watch?v=Gu_5kkErQ6Y)
-- [2] [https://media.blackhat.com/bh-us-11/Mandt/BH_US_11_Mandt_win32k_WP.pdf](https://media.blackhat.com/bh-us-11/Mandt/BH_US_11_Mandt_win32k_WP.pdf)
-- [3] [https://reactos.org/wiki/Techwiki:Win32k](https://reactos.org/wiki/Techwiki:Win32k)
-- [4] [https://fullpwnops.com/Windows-10-kaslr-infoleak/](https://fullpwnops.com/Windows-10-kaslr-infoleak/)
+- [1] [https://reactos.org/wiki/Techwiki:Win32k](https://reactos.org/wiki/Techwiki:Win32k)
+- [2] [https://fullpwnops.com/Windows-10-kaslr-infoleak/](https://fullpwnops.com/Windows-10-kaslr-infoleak/)
 
 ----
 
@@ -29,4 +25,10 @@ This Windows kernel address leakage proof-of-concept demonstrates how the user-m
 
 With the Windows 10 1703 update in 2016, `ulClientDelta` from `Win32ClientInfo` has been removed, successfully mitigating the previously demonstrated information leak. 
 
+### Windows 10 1909 - (November 2019 Update)
 
+- **EnumDeviceDrivers kernel information leakage**
+
+This is the classic and easiest technique for bypassing KASRL using the EnumDeviceDrivers winAPI function to get the base address of ntoskrnl, this technique works on pretty much every Windows version. But it requires at least medium-integrity execute. 
+
+![desktop heap leakage](https://github.com/FULLSHADE/LEAKYDRIPPER/blob/master/images/EnumDeviceDrivers.PNG)
