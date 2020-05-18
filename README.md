@@ -8,8 +8,6 @@ Blog post that goes along with this - https://fullpwnops.com/Windows-10-kaslr-in
 
 The following information leakage proof-of-concept works on various Windows versions, from Windows 7 till Windows 10 1603, where it has now been mitigated in 2016 via the 1703 update.
 
-![winVer](https://raw.githubusercontent.com/FULLSHADE/LEAKYDRIPPER/master/images/winVersions.png)
-
 This Windows kernel address leakage proof-of-concept demonstrates how the user-mode mapped DesktopHeap on Windows 1607 x64 bit can be used to leak various kernel addresses via undocumented kernel data structures and undocumented members.
 
 ![desktop heap leakage](https://github.com/FULLSHADE/LEAKYDRIPPER/blob/master/images/DesktopHeapLeak.png)
