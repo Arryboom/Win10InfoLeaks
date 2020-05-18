@@ -44,9 +44,9 @@ int main() {
 
     std::cout << "\n[+] Windows 10 1607 DesktopHeap (TEB.Win32ClientInfo) kernel address leakage\n\n";
 
-    std::cout << "\t[>] ulClientDelta                : " << std::hex << "0x" << ulClientDelta << std::endl;
-    std::cout << "\t[>] Kernel Desktop base address  : " << pvDesktopBase << std::endl;
-    std::cout << "\t[>] Kernel Desktop limit address : " << pvDesktopLimit << std::endl;
+    std::cout << "\t[>] ulClientDelta                : " << "0x" << ulClientDelta << std::endl;
+    std::cout << "\t[>] Kernel Desktop base address  : " << "0x" << pvDesktopBase << std::endl;
+    std::cout << "\t[>] Kernel Desktop limit address : " << "0x" << pvDesktopLimit << std::endl;
 
     return 0;
 }
