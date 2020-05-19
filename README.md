@@ -27,6 +27,6 @@ With the Windows 10 1703 update in 2016, `ulClientDelta` from `Win32ClientInfo` 
 
 - **EnumDeviceDrivers kernel information leakage**
 
-This is the classic and easiest technique for bypassing KASRL using the EnumDeviceDrivers winAPI function to get the base address of ntoskrnl, this technique works on pretty much every Windows version. But it requires at least medium-integrity execute. 
+This is the classic and easiest technique for bypassing KASRL using the EnumDeviceDrivers winAPI function to get the base address of ntoskrnl, this technique works on pretty much every Windows version. But it requires at least medium-integrity execution. 
 
 ![desktop heap leakage](https://github.com/FULLSHADE/LEAKYDRIPPER/blob/master/images/EnumDeviceDrivers.PNG)
