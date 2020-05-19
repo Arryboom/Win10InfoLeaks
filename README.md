@@ -23,7 +23,7 @@ This Windows kernel address leakage proof-of-concept demonstrates how the user-m
 
 With the Windows 10 1703 update in 2016, `ulClientDelta` from `Win32ClientInfo` has been removed, successfully mitigating the previously demonstrated information leak. 
 
-### Windows 10 1909 - (November 2019 Update)
+### Windows 10 (all/most versions)
 
 - **EnumDeviceDrivers kernel information leakage**
 
