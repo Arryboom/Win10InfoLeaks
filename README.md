@@ -1,4 +1,4 @@
-This repository covers various techniques and methods for leaking various Windows kernel addresses on Windows 10 1607, 1703, 1809, and 1909. This repository provides the tools and code as proof of concepts for leaking these kernel addresses. Leaking Windows kernel addresses from a unprivileged user mode standpoint can be combined with various offsets and used to bypass the KASLR security mitigation.
+This repository covers various techniques and methods I write while conducting research into infoleaks, these are for leaking various Windows kernel addresses on Windows 10 1607, 1703, 1809, and 1909. This repository provides the tools and code as proof of concepts for leaking these kernel addresses. Leaking Windows kernel addresses from a unprivileged user mode standpoint can be combined with various offsets and used to bypass the KASLR security mitigation.
 
 Blog post that goes along with this - https://fullpwnops.com/Windows-10-kaslr-infoleak/
 
